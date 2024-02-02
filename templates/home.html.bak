@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta name="viewport" content="with=device-width, initial-scale=1.0">
+		<title> Library Management System </title>
+		<link rel="stylesheet" href="static/style.css" >
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+				<div class="sidenav">
+						<a href="#tables"><h2>TABLES</h2></a>
+						<a href="#publisher">PUBLISHER</a>
+						<a href="#branch">LIBRARY_BRANCH</a>
+						<a href="#book">BOOK</a>
+						<a href="#authors">BOOK_AUTHORS</a>
+						<a href="#copies">BOOK_COPIES</a>
+						<a href="#lending">BOOK_LENDING</a>
+						
+				</div>
+				
+				<div class="main">
+				<a name="tables"></a>
+				<h2>WELCOME</h2>
+				<p>
+					         Library Management System is a system which maintains the information about the books present in the library, 
+							 their authors, the members of library to whom books are issued, library staff and all. This is very difficult 
+							 to organize manually. Maintenance of all this information manually is a very complex task. Owing to the 
+							 advancement of technology, organization of an Online Library becomes much simple. The Online Library Management 
+							 has been designed to computerize and automate the operations performed over the information about the members, 
+							 book issues and returns and all other operations. This computerization of library helps in many instances of its 
+							 maintenances. It reduces the workload of management as most of the manual work done is reduced.
+				</p>
+				</div>
+				
+		<br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		
+		
+		<a name="publisher"></a>
+		
+		<div class="head"><h1>PUBLISHER</h1></div>
+		<div class="form">
+			<form method="POST" action="">
+  				<label class="namelabel" for="name">Name:</label>
+				<input class="name" type="name" id="name" name="name"></input><br><br>
+ 		 
+				<label class="addlabel" for="address">Address:</label>
+  				<input class="add" type="address" id="address" name="address">
+				</input><br><br>
+		
+				<label class="numberlabel" for="phone">Phone Number:</label>
+				<input class="no" type="phone" id="phone" name="phone"></input><br><br>
+
+  				<button type="submit">SUBMIT</button>
+				
+				<br><br>
+				{% with messages = get_flashed_messages(category_filter=["publi"]) %}
+				  {% if messages %}
+					{% for message in messages %}
+				 <h7 style="color:powderblue;"> {{ message }}</h7>
+				 {% endfor %}
+					{% endif %}
+					{% endwith %}
+   			</form>
+		</div>
+		
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+	
+		
+		<a name="branch"></a>
+		<div class="head"><h1>LIBRARY_BRANCH</h1></div>
+		<div class="form">
+			<form method="POST" action="">
+  				<label class="namelabel" for="br_id">BRANCH_ID</label>
+				<input class="name" type="name" id="br_id" name="br_id"></input><br><br>
+ 		 
+				<label class="namelabel" for="br_name">BRANCH_NAME</label>
+  				<input class="name" type="name" id="br_name" name="br_name"></input><br><br>
+		
+				<label class="addlabel" for="br_address">BRANCH_ADDRESS</label>
+				<input class="add" type="br_address" id="br_address" name="br_address">
+				</input><br><br>
+  				<button type="submit">SUBMIT</button>
+				<br><br>
+				{% with messages = get_flashed_messages(category_filter=["br"]) %}
+				  {% if messages %}
+					{% for message in messages %}
+				 <h7 style="color:powderblue;"> {{ message }}</h7>
+				 {% endfor %}
+					{% endif %}
+					{% endwith %}
+   			</form>
+		</div>
+		
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		
+		<a name="book"></a>
+		<div class="head"><h1>ADD BOOKS</h1></div>
+		<div class="form">
+			<form method="POST" action="">
+  				<label class="namelabel" for="bo_id">BOOK_ID</label>
+				<input class="name" type="name" id="bo_id" name="bo_id"></input><br><br>
+ 		 
+				<label class="numberlabel" for="bo_title">TITLE</label>
+  				<input class="no" type="name" id="bo_title" name="bo_title"></input><br><br>
+		
+				<label class="numberlabel" for="pub_name">PUBLISHER_NAME</label>
+				<input class="no" type="name" id="pub_name" name="pub_name"></input><br><br>
+				
+				<label class="numberlabel" for="pub_year">PUB_YEAR</label>
+				<input class="no" type="name" id="pub_year" name="pub_year"></input><br><br>
+
+  				<button type="submit">SUBMIT</button>
+				<br><br>
+				{% with messages = get_flashed_messages(category_filter=["bo"]) %}
+				  {% if messages %}
+					{% for message in messages %}
+				 <h7 style="color:powderblue;"> {{ message }}</h7>
+				 {% endfor %}
+					{% endif %}
+					{% endwith %}
+   			</form>
+		</div>
+		
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		
+		<a name="authors"></a>
+		<div class="head"><h1>AUTHORS</h1></div>
+		<div class="form">
+			<form method="POST" action="">
+  				<label class="namelabel" for="bo_id">BOOK_ID</label>
+				<input class="name" type="name" id="bo_id" name="bo_id"></input><br><br>
+ 		 
+				<label class="namelabel" for="a_name">AUTH_NAME</label>
+  				<input class="name" type="name" id="a_name" name="a_name">
+				</input><br><br>
+
+  				<button type="submit">SUBMIT</button>
+				<br><br>
+				{% with messages = get_flashed_messages(category_filter=["ba"]) %}
+				  {% if messages %}
+					{% for message in messages %}
+				 <h7 style="color:powderblue;"> {{ message }}</h7>
+				 {% endfor %}
+					{% endif %}
+					{% endwith %}
+   			</form>
+		</div>
+		
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		
+		<a name="copies"></a>
+		<div class="head"><h1>BOOK COPIES</h1></div>
+		<div class="form">
+			<form method="POST" action="">
+  				<label class="namelabel" for="bo_id">BOOK_ID</label>
+				<input class="name" type="name" id="bo_id" name="bo_id"></input><br><br>
+ 		 
+				<label class="namelabel" for="br_id">BRANCH_ID</label>
+  				<input class="name" type="name" id="br_id" name="br_id"></input><br><br>
+
+				<label class="numberlabel" for="no_name">NO_COPIES</label>
+				<input class="no" type="name" id="no_name" name="no_name"></input><br><br>
+
+  				<button type="submit">SUBMIT</button>
+				<br><br>
+				{% with messages = get_flashed_messages(category_filter=["bc"]) %}
+				  {% if messages %}
+					{% for message in messages %}
+				 <h7 style="color:powderblue;"> {{ message }}</h7>
+				 {% endfor %}
+					{% endif %}
+					{% endwith %}
+   			</form>
+		</div>
+		
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		
+		<a name="lending"></a>
+		<div class="head"><h1>LENDING</h1></div>
+		<div class="form">
+			<form method="POST" action="">
+  				<label class="namelabel" for="bo_id">BOOK_ID</label>
+				<input class="name" type="name" id="bo_id" name="bo_id"></input><br><br>
+				
+				<label class="namelabel" for="br_id">BRANCH_ID</label>
+				<input class="name" type="name" id="br_id" name="br_id"></input><br><br>
+		
+				<label class="numberlabel" for="card_no">CARD_NO</label>
+				<input class="no" type="name" id="card_no" name="card_no"></input><br><br>
+				
+				<label class="numberlabel" for="date_o">DATE_OUT</label>
+				<input class="no" type="name" id="date_o" name="date_o"></input><br><br>
+				
+				<label class="numberlabel" for="due">DUE_OUT</label>
+				<input class="no" type="name" id="due" name="due"></input><br><br>
+
+  				<button type="submit">SUBMIT</button>
+				<br><br>
+				{% with messages = get_flashed_messages(category_filter=["bl"]) %}
+				  {% if messages %}
+					{% for message in messages %}
+				 <h7 style="color:powderblue;"> {{ message }}</h7>
+				 {% endfor %}
+					{% endif %}
+					{% endwith %}
+   			</form>
+		</div>
+		
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+	
+	</body>
+</html>

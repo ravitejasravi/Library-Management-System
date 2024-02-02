@@ -1,0 +1,173 @@
+body{
+	
+	font-family: 'Oswald', sans-serif;
+	background: url("images/bg7.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.sidenav
+{
+	background: #002240;
+	position: fixed;
+	height: 100%;
+	width: 20%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+.sidenav a
+{
+	color: #fff;
+	padding: 10px 15px 10px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	display: block;
+}
+
+.sidenav a:hover
+{
+	background: blue;
+}
+
+h2
+{
+	padding: 10px 15px 10px 16px;
+	color: #fff;
+	border-bottom-style: solid;
+}
+.main
+{
+	background: #002240;
+	margin-left: 20%;
+	padding: 4px 10px;
+	color: #fff;
+	display: inline-block;
+}
+@media screen and (max-width: 600px)
+{
+	.sidenav
+	{
+		padding-top: 15px;
+		width: 155px;
+	}
+	.sidenav a
+	{
+		padding-left: 20px;
+		font-size: 18px;
+	}
+	.main
+	{
+		margin-left: 32%;
+		font-size: 15px;
+	}
+	p
+	{
+		display: inline-block;
+	}
+}
+
+
+.head{
+	width: 800px;
+	background-color: rgb(0,0,0,0.8);
+	margin: auto;
+	color: #FFFFFF;
+	padding: 10px 0px 10px 0px;
+	text-align: center;
+	border-radius: 15px 15px 0px 0px;
+}
+.form{
+	width: 800px;
+	background-color: rgb(0,0,0,0.8);
+	margin: auto;
+
+}
+
+form{
+	padding: 40px;
+}
+
+.namelabel{
+	margin-left: 25px;
+	margin-top: 30px;
+	width: 125px;
+	font-size: 18px;
+	color: white;
+	font-weight: 400;
+}
+.name{
+	margin-left: 25px;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+}
+
+.addlabel{
+	margin-left: 25px;
+	margin-top: 30px;
+	width: 125px;
+	font-size: 18px;
+	color: white;
+	font-weight: 400;
+}
+.add{
+	
+	margin-left: 25px;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	width: 480px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+
+}
+
+.numberlabel{
+	margin-left: 25px;
+	margin-top: 30px;
+	width: 125px;
+	font-size: 18px;
+	color: white;
+	font-weight: 400;
+}
+
+.no{
+	margin-left: 25px;
+	left: 200px;
+	top: -37px;
+	line-height: 40px;
+	border-radius: 6px;
+	padding: 0 22px;
+	font-size: 16px;
+}
+
+button{
+	background-color: #3BAF9F;
+	display: block;
+	margin: 20px 0px 0px 20px;
+	text-align: center;
+	border-radius: 12px;
+	border:2px solid #366473;
+	padding:  14px 110px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	transition: 0.25s; 
+	position: center;
+}
+button:hover{
+	background-color: #5390F5;
+}
+
